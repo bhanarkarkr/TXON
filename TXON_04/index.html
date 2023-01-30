@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+</head>
+<body bgcolor ="#080808">
+	
+	<div id="header">
+		
+		<div class="container">
+			<nav>
+				
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="a">
+			<div class="header-text">
+				<div class="header-text left">
+					<h1>Hi, I am Krutika Bhanarkar</h1>
+				<p>UI/UX Designer</p>
+		        </div>
+		        <div class="header-text right">
+				<img src="C:\Users\kruti\Downloads\picwish1.png" class="logo">
+			    </div>
+			</div>
+				
+			</div>
+		</div>
+
+	</div>
+	<div id="about">
+		<div id="container">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="C:\Users\kruti\Downloads\WhatsApp Image 2023-01-30 at 13.21.47.jpeg" >
+				</div>
+				<div class="about-col-2">
+					<h2 class="sub-title">About Me</h2>
+					<p> I am currently pursuing B.tech degree in Data Science under Computer Science.Quest to work positively to impart knowledge about the latest technologies. I intend to contribute positively towards the growth and prosperity of the company.</p>
+					<div class="tab-title">
+						<p class="tab-links" class="active-link" onclick="opentab('skills')">Skills</p>
+						<p class="tab-links" onclick="opentab('experience')">Experience</p>
+						<p class="tab-links" onclick="opentab('education')">Education</p>
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+						<ul>
+							<li><span>UI/UX</span><br>Designing Web/App Interface</li>
+							<li><span>Web Development</span><br>Web app Development</li>
+							<li><span>App Development</span><br>Building Android Apps</li>
+							<li><span>NLP</span><br>Natural Language Processing</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="experience">
+						<ul>
+							<li><span>NLP Project</span><br>Video Summarization</li>
+							
+						</ul>
+					</div>
+					<div class="tab-contents" id="education">
+						<ul>
+							<li><span>2020</span><br>Primary College from St.George College ,Nagpur</li>
+							<li><span>2018</span><br>Schooling from Sanskar Vidya Sagar, Nagpur</li>
+							
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+	<!------services----->
+	<div class="portfolio">
+		<h1 class="sub-title">My Projects</h1>
+		<div class="work-list">
+			<div class="work">
+				<img src="C:\Users\kruti\Downloads\personal-portfolio-img\images\work-1.png">
+				<div class="layer">
+					<h2>Video Summarization using NLP</h2>
+					<p>This project helped me to learn about various text summarization techniques in which video is converted to summarized audio</p>
+					<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+				</div>
+				
+			</div>
+			<div class="work">
+				<img src="C:\Users\kruti\Downloads\personal-portfolio-img\images\work-2.png">
+				<div class="layer">
+					<h2>Food Delivery App</h2>
+					<p>Build a food delivery app using Android development skills so customer can easily order food from nearest location</p>
+					<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+				</div>
+			</div>
+			<div class="work">
+				<img src="C:\Users\kruti\Downloads\personal-portfolio-img\images\work-3.png">
+				<div class="layer">
+					<h2>Data Visualization For Employees</h2>
+					<p> Used a random dataset for data visualization in Power BI</p>
+					<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="btn"> See More </a>
+	</div>
+	<!----contact--------->
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-left">
+					<h1 class="sub-title">Contact Me</h1>
+					<p><i class="fa-sharp fa-solid fa-paper-plane"></i>krutikabhanarkar9@gmail.com</p>
+					<p><i class="fa-solid fa-phone"></i>+917798128284</p>
+					<div class="social-icons">
+						<a href=""><i class="fab fa-facebook"></i></a>
+						<a href=""><i class="fa-brands fa-square-instagram"></i></a>
+						<a href=""><i class="fa-brands fa-linkedin"></i></a>
+					</div>
+					<a href="file:///C:/Users/kruti/Downloads/Krutika%20Bhanarkar%20RESUME.pdf" download="" class="btn btn2">Download CV</a>
+				</div>
+				<div class="contact-right">
+					<form>
+						<input type="text" name="Name" placeholder="Your Name" required>
+						<input type="email" name="email" placeholder="Your Email" required>
+						<textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+						<button type="submit" class="btn btn2">Submit</button>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+<script>
+	var tablinks=document.getElementsByClassName("tab-links");
+	var tabcontents=document.getElementsByClassName("tab-contents");
+
+	function opentab(tabname)
+	{
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link");
+		}
+		for(tabcontent of tabcontents)
+		{
+			tabcontent.classList.remove("active-tab");
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+	</script>
+
+</body>
+</html>
